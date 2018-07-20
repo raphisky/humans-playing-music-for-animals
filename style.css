@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  font-family: Helvetica, Arial;
+  text-align: center;
+  background: white;
+  background-position: left bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #00826c;
+}
+
+#header {
+  z-index: 20;
+  position: fixed;
+  float: left;
+}
+
+iframe {
+  border-width: 0px;
+  display: block;
+  float: left;
+}
+
+h1 {
+  font-size: 48px;
+  display: block;
+  color: #FF7BEC;
+}
+
+#nextVideo {
+  margin-left: 10px;
+  background-color: #FF7BEC;
+  width: 150px;
+  padding: 3px;
+  border: 2px solid #FF7BEC;
+  color: #00826c;
+  text-transform: uppercase;
+  font-size: 18px;
+  cursor: pointer;
+  display: block;
+}
+
+#videoBox {
+  position: relative;
+  display: block;
+}
