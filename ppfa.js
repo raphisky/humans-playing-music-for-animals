@@ -5,21 +5,31 @@ var isDataLoaded = false;
 $.getJSON("https://spreadsheets.google.com/feeds/list/1p67fGqnTUprQ2YU6Oy_yjU53-cYEWB8sAcfyaLp6JRo/od6/public/values?alt=json", function(data) {
   for (var el in data.feed.entry) {
     videoLinks.push(data.feed.entry[el].gsx$link.$t);
-    console.log(videoLinks[el]);
   }
   isDataLoaded = true;
+  getWindowWidth();
   return videoLinks;
 });
+
+var iframeWidth;
+function getWindowWidth() {
+  if ($(window).width() > 900) {
+    iframeWidth = $(window).width() / 3 + "px";
+  }
+  else if ($(window).width() < 900) {
+    iframeWidth = $(window).width() + "px";
+  }
+}
 
 var nextButton = document.getElementById('nextVideo');
 var videoContainer = document.getElementById('videoBox');
 
-function loadVideo(v) {
+function loadVideo() {
   if (isDataLoaded) {
-    console.log(videoLinks[v]);
+    var randomVideoIndex = Math.floor(Math.random()*videoLinks.length);
     var ifrm = document.createElement("iframe");
-    ifrm.setAttribute("src", videoLinks[v]);
-    ifrm.style.width = "420px";
+    ifrm.setAttribute("src", videoLinks[randomVideoIndex]);
+    ifrm.style.width = iframeWidth;
     ifrm.style.height = "315px";
     videoContainer.appendChild(ifrm);
     videoIndex += 1;

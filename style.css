@@ -1,7 +1,6 @@
 body {
   margin: 0;
   font-family: Helvetica, Arial;
-  text-align: center;
   background: white;
   background-position: left bottom;
   background-size: cover;
@@ -9,7 +8,16 @@ body {
   background-color: #00826c;
 }
 
+html, body {
+  height: 100%;
+}
+
+#videoBox {
+  margin: auto;
+}
+
 #header {
+  padding-left: 15px;
   z-index: 20;
   position: fixed;
   float: left;
@@ -22,20 +30,21 @@ iframe {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 56px;
   display: block;
   color: #FF7BEC;
 }
 
 #nextVideo {
-  margin-left: 10px;
   background-color: #FF7BEC;
-  width: 150px;
-  padding: 3px;
-  border: 2px solid #FF7BEC;
+  width: 300px;
+  padding: 10px;
+  border: 4px solid #00826c;
   color: #00826c;
+  text-align: center;
   text-transform: uppercase;
-  font-size: 18px;
+  line-height: 36px;
+  font-size: 36px;
   cursor: pointer;
   display: block;
 }
