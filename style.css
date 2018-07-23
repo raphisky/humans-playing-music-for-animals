@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0;
   font-family: Helvetica, Arial;
@@ -52,4 +54,18 @@ h1 {
 #videoBox {
   position: relative;
   display: block;
+}
+
+@media screen and (max-width: 980px) {
+  h1 {
+    font-size: 28px;
+  }
+  #nextVideo {
+    width: 150px;
+    padding: 5px;
+    border: 2px solid #00826c;
+    line-height: 18px;
+    font-size: 18px;
+  }
+
 }
