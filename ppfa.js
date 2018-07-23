@@ -13,10 +13,10 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1p67fGqnTUprQ2YU6Oy_yjU53-
 
 var iframeWidth;
 function getWindowWidth() {
-  if ($(window).width() > 900) {
+  if ($(window).width() > 980) {
     iframeWidth = $(window).width() / 3 + "px";
   }
-  else if ($(window).width() < 900) {
+  else if ($(window).width() < 980) {
     iframeWidth = $(window).width() + "px";
   }
 }
