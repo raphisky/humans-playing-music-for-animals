@@ -3,11 +3,10 @@
 body {
   margin: 0;
   font-family: Helvetica, Arial;
-  background: white;
   background-position: left bottom;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: #00826c;
+  background-color: black;
 }
 
 html, body {
@@ -34,20 +33,26 @@ iframe {
 h1 {
   font-size: 56px;
   display: block;
-  color: #FF7BEC;
+  color: deeppink;
 }
 
 #nextVideo {
-  background-color: #FF7BEC;
-  width: 300px;
+  font-weight: 800;
+  background-color: deeppink;
+  width: 280px;
   padding: 10px;
-  color: #00826c;
+  color: black;
   text-align: center;
   text-transform: uppercase;
   line-height: 36px;
   font-size: 36px;
   cursor: pointer;
   display: block;
+}
+
+#nextVideo:hover, #nextVideo:active {
+  background-color: black;
+  color: deeppink;
 }
 
 #videoBox {
