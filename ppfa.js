@@ -8,8 +8,17 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1p67fGqnTUprQ2YU6Oy_yjU53-
   }
   isDataLoaded = true;
   getWindowWidth();
+  shuffleVideoLinks(videoLinks);
   return videoLinks;
 });
+
+function shuffleVideoLinks(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
 
 var iframeWidth;
 function getWindowWidth() {
@@ -24,11 +33,11 @@ function getWindowWidth() {
 var nextButton = document.getElementById('nextVideo');
 var videoContainer = document.getElementById('videoBox');
 
-function loadVideo() {
+function loadVideo(v) {
   if (isDataLoaded) {
-    var randomVideoIndex = Math.floor(Math.random()*videoLinks.length);
+    // var randomVideoIndex = Math.floor(Math.random()*videoLinks.length);
     var ifrm = document.createElement("iframe");
-    ifrm.setAttribute("src", videoLinks[randomVideoIndex]);
+    ifrm.setAttribute("src", videoLinks[v]);
     ifrm.style.width = iframeWidth;
     ifrm.style.height = "315px";
     videoContainer.appendChild(ifrm);
